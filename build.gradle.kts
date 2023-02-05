@@ -25,6 +25,7 @@ repositories {
 plugins {
   `java-library`
   id("application")
+  id("net.ltgt.errorprone") version "3.0.1"
 }
 
 application {
@@ -35,4 +36,5 @@ dependencies {
   implementation("org.geysermc.geyser:core:2.1.0-20230202.213610-91") { isTransitive = false }
   implementation("commons-cli:commons-cli:1.5.0")
   implementation("org.apache.commons:commons-csv:1.10.0")
+  errorprone("com.google.errorprone:error_prone_core:2.18.0")
 }
