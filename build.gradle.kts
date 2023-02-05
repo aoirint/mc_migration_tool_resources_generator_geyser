@@ -38,4 +38,5 @@ dependencies {
   implementation("commons-cli:commons-cli:1.5.0")
   implementation("org.apache.commons:commons-csv:1.10.0")
   errorprone("com.google.errorprone:error_prone_core:2.18.0")
+  spotbugsPlugins("com.mebigfatguy.sb-contrib:sb-contrib:7.4.7")
 }
