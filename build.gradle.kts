@@ -32,8 +32,5 @@ application {
 }
 
 dependencies {
-  implementation("org.geysermc:api:2.1.0-20230122.182746-86")
-  implementation("org.geysermc.geyser:common:2.1.0-20230122.182756-71")
-  implementation("org.geysermc.geyser:api:2.1.0-20230122.182748-86")
-  implementation("org.geysermc.geyser:core:2.1.0-20230122.182759-86")
+  implementation("org.geysermc.geyser:core:2.1.0-20230202.213610-91") { isTransitive = false }
 }
