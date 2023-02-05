@@ -26,6 +26,7 @@ plugins {
   `java-library`
   id("application")
   id("net.ltgt.errorprone") version "3.0.1"
+  id("com.github.spotbugs") version "5.0.13"
 }
 
 application {
