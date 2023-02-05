@@ -1,3 +1,5 @@
+package com.aoirint.mc_migration_tool_resources_generator_geyser;
+
 import java.util.Locale;
 import org.geysermc.geyser.inventory.item.Enchantment;
 
