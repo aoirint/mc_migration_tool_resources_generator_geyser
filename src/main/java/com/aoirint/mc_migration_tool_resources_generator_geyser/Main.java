@@ -33,6 +33,15 @@ public class Main {
   public static void main(String[] args) throws ParseException, FileNotFoundException, IOException {
     final var options = new Options();
     options.addOption(
+      Option.builder("t")
+        .argName("type")
+        .longOpt("type")
+        .type(String.class)
+        .hasArg()
+        .desc("Type")
+        .required()
+        .build());
+    options.addOption(
       Option.builder("o")
         .argName("outputFile")
         .longOpt("output")
@@ -44,7 +53,13 @@ public class Main {
     final var parser = new DefaultParser();
     final var cmd = parser.parse(options, args);
 
-    final var optionFile = new File(cmd.getOptionValue("o", "enchantments.csv"));
-    dumpEnchantments(new FileWriter(optionFile, Charset.forName("utf-8")));
+    final var type = cmd.getOptionValue("t");
+
+    if ("enchantments".equals(type)) {
+      final var optionFile = new File(cmd.getOptionValue("o", "enchantments.csv"));
+      dumpEnchantments(new FileWriter(optionFile, Charset.forName("utf-8")));
+    } else {
+      throw new RuntimeException(String.format("Unknown type: %s. Use [enchantments].", type));
+    }
   }
 }
