@@ -16,5 +16,5 @@ Distribute these files.
 ### Run
 
 ```shell
-./gradlew run --args="-o resources/enchantments.csv"
+./gradlew run --args="-t enchantments -o resources/enchantments.csv"
 ```
