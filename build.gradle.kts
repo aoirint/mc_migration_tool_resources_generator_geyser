@@ -33,4 +33,6 @@ application {
 
 dependencies {
   implementation("org.geysermc.geyser:core:2.1.0-20230202.213610-91") { isTransitive = false }
+  implementation("commons-cli:commons-cli:1.5.0")
+  implementation("org.apache.commons:commons-csv:1.10.0")
 }
